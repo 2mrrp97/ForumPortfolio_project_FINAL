@@ -1,0 +1,50 @@
+<?php
+    session_start();
+    $session_active = true;
+    if(!isset($_SESSION['loggedin'])){
+        $session_active = false;
+        session_destroy();
+    }
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoginProject/home</title>
+    <!--bootstrap css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <!-- bootstrap js --->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" media="all" href="./cssFiles_here/styles.css"  type="text/css">
+    
+</head>
+<body>
+   <?php 
+        if(!$session_active){
+            require './partials/_navbar.php';
+            require './partials/ask_to_login.php';
+            exit();
+        } 
+        else {
+            require './partials/logged_nav.php';
+        }
+    ?>
+
+    <div class="container my-5">
+        <h1 class ="text-center">Hi , 
+            <i style ="color : red"><?php echo $_SESSION['username'] ?> </i>! Welcome to our website !
+        </h1>
+    </div>
+    
+</body>
+</html>

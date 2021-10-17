@@ -1,0 +1,215 @@
+body {
+  overflow-x: hidden;
+}
+
+h5 {
+  display: inline-block;
+}
+
+.mydesc {
+  opacity: 0;
+  transition: all 1s ease;
+  transform: translateY(10%);
+}
+
+.mybars {
+  opacity: 0;
+  transition: all 1s ease;
+  transform: translateY(10%);
+  padding: 50px;
+}
+
+.appear-in {
+  opacity: 1;
+  transform: translateY(-10%);
+}
+
+.appear-in-lr {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.text-green {
+  color: green;
+  font-weight: bolder;
+}
+
+.techpart {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.techi_use {
+  list-style: none;
+  padding: 5px;
+  position: relative;
+}
+
+.techi_use:hover {
+  box-shadow: 1px 1px 5px black;
+  background: rgba(179, 179, 179, 0.5);
+}
+
+.logo {
+  position: absolute;
+  height: 2rem;
+  left: 0;
+  transform: translate(-200%, 50%);
+  background: white;
+}
+
+.spin {
+  animation-name: spinner;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  position: absolute;
+  left: -3.4rem;
+  top: 1.5rem;
+  border-radius: 300px;
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.myBtn {
+  border: none;
+  background: grey;
+  margin: -3px;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.myBtn:hover {
+  background: rgb(165, 165, 165);
+}
+
+.projects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 50px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-active {
+  background: rgb(228, 228, 228);
+}
+
+.mycard {
+  display: inline-flex;
+  flex-direction: column;
+  min-height: 450px;
+  width: 30%;
+  background: rgb(165, 165, 165);
+  padding: 10px;
+  margin: 10px 20px;
+}
+
+.mycard:hover {
+  box-shadow: 1px 1px 10px black;
+}
+
+@media (max-width: 1300px) {
+  .mycard {
+    width: 45%;
+  }
+  #projectcards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 900px) {
+  .mycard {
+    width: 100%;
+    margin: 10px;
+  }
+}
+
+#projectcards {
+  width: 100%;
+  padding: 50px;
+}
+
+#mydp {
+  border-radius: 23% 77% 75% 25% / 53% 31% 69% 47%;
+  outline: none;
+  box-shadow: 10px 10px 0px #0c0c0c;
+  border: 1px solid black;
+  height: 20rem;
+}
+
+#whatami {
+  display: inline-block;
+  color: red;
+  width: 100%;
+}
+
+.helper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  min-height: 100vh;
+}
+
+.textEffect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+
+.imgcnt {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.techs {
+  width: 45%;
+}
+
+.aboutme {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 600px) {
+  .abtmeContent {
+    width: 80vw;
+  }
+
+  .techs {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .imgcnt,
+  .textEffect {
+    width: 100%;
+  }
+}
