@@ -181,7 +181,7 @@ const projects = [
     }
     ,
     {
-        "link": "#",
+        "link": "https://github.com/2mrrp97/employee-record-app",
         "title": "Employee records App",
         "type": "fullstack",
         "techused": "HTML , CSS , JavaScript , Php , MySQL , Apache server",
