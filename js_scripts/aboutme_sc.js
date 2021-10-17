@@ -222,6 +222,6 @@ function filter_and_show(arr, type) {
     });
     projectcards.innerHTML = s;
     if (projectcards.children.length == 0) {
-        projectcards.innerHTML = '<div class = "fw-bold"><h3>Sorry , no projects are uploaded in this category yet. </h3></div>';
+        projectcards.innerHTML = '<div class = "fw-bold "><h3 class = "text-center">Sorry , no projects are uploaded in this category yet. </h3></div>';
     }
 }
