@@ -149,7 +149,7 @@ const projects = [
     }
     ,
     {
-        "link": "https://2mrrp97.github.io/portfolio/",
+        "link": "https://2mrrp97.github.io/portfolio-practice/",
         "title": "portfolio practice",
         "type": "frontend",
         "techused": "HTML , CSS , JavaScript , Bootstrap",
